@@ -1,0 +1,35 @@
+.box-container {
+    background-color: lightblue;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .box-heading {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .box-paragraph {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  .box-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  

@@ -1,0 +1,38 @@
+.product-box {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .product-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .product-price {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .product-rating {
+    font-size: 14px;
+    color: #888;
+  }
+
+  .product-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    filter: brightness(1.05);
+  }
+  
