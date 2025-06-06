@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons'
@@ -8,10 +8,22 @@ import { Link,useNavigate } from 'react-router-dom';
 export const Navbar = () => {
 
   const [menu,setmenu] = useState();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate('/'); 
+};
+
+useEffect(() => {
+  const user = localStorage.getItem("user");
+  setIsLoggedIn(!!user);
+}, []);
+
+const handleLogout = () => {
+  localStorage.removeItem("user");
+  setIsLoggedIn(false);
+  navigate("/login");
 };
 
   return (
@@ -27,7 +39,12 @@ export const Navbar = () => {
             <li onClick={()=>{setmenu("advisory")}}> <Link style={{textDecoration:'none'}} to='/advisory'>Advisory</Link>{menu==="advisory"?<hr/>:<></>}</li>
         </ul>
         <div className="nav-login-cart">
+          {isLoggedIn ? (
+            <button className='custom-btn btn-4' onClick={handleLogout}>Logout</button>
+          ) : (
             <Link to='/login'><button className='custom-btn btn-4'>Login</button></Link>
+          )}
+            
             <Link to='/cart'><FontAwesomeIcon icon={faShoppingBasket} size='xl' /></Link>
             <div className="nav-cart-count">0</div>
         </div>

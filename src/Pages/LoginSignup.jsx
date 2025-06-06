@@ -16,11 +16,12 @@ function LoginSignup() {
 
         try{
 
-            await axios.post("http://localhost:8000/",{
+            await axios.post("http://localhost:5000/api/auth/login",{
                 email,password
             })
             .then(res=>{
                 if(res.data==="exist"){
+                    localStorage.setItem("user", JSON.stringify({ email }));
                     history("/home",{state:{id:email}})
                 }
                 else if(res.data==="notexist"){
@@ -46,7 +47,7 @@ function LoginSignup() {
 
             <h1>Login</h1>
 
-            <form action="POST">
+            <form onSubmit={submit}>
                 <input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Email"  />
                 <input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Password"  />
                 <input type="submit" onClick={submit} />
