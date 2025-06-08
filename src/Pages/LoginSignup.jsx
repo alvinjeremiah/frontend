@@ -22,7 +22,8 @@ function LoginSignup() {
             .then(res=>{
                 if(res.data==="exist"){
                     localStorage.setItem("user", JSON.stringify({ email }));
-                    history("/home",{state:{id:email}})
+                    history("/", { replace: true, state: { id: email } });
+
                 }
                 else if(res.data==="notexist"){
                     alert("User have not sign up")

@@ -10,6 +10,7 @@ import Workshop from './Pages/Workshop';
 import Advisory from './Pages/Advisory';
 import Artist from './Pages/Artist';
 import Signup from './Pages/Signup';
+import ArtistSignup from './Pages/ArtistSignup';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/login' element={<LoginSignUp/>}/>
           <Route path='/signup' element={<Signup/>}/>
+          <Route path='/artist/signup' element={<ArtistSignup/>}/>
         </Routes>
       </BrowserRouter>
       

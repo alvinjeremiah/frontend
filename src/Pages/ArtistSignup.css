@@ -1,0 +1,176 @@
+/* ArtistSignup.css */
+
+/* Page Container */
+.signup-container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #fce7f3, #c7d2fe);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Heading */
+  .heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #7e22ce;
+    margin-bottom: 1rem;
+  }
+  
+  /* Subheading Paragraph */
+  .subheading {
+    text-align: center;
+    max-width: 48rem;
+    color: #4b5563;
+    margin-bottom: 2.5rem;
+  }
+  
+  /* Grid Layout */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+    max-width: 80rem;
+  }
+  
+  @media (min-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Form Styling */
+  .form-container {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-label {
+    display: block;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-input, .form-select, .form-textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .form-textarea {
+    resize: vertical;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .submit-btn {
+    background-color: #7e22ce;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .submit-btn:hover {
+    background-color: #6b21a8;
+  }
+  
+  /* Preview Card */
+  .preview-container {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+  }
+  
+  .preview-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #7e22ce;
+    margin-bottom: 1rem;
+  }
+  
+  .preview-image {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+  }
+  
+  .preview-username {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .preview-type {
+    font-style: italic;
+    color: #6b7280;
+  }
+  
+  .preview-bio {
+    color: #374151;
+    margin-top: 0.5rem;
+  }
+  
+  .preview-mediums {
+    margin-top: 1rem;
+  }
+  
+  .preview-mediums h4 {
+    font-weight: 600;
+  }
+  
+  .preview-mediums ul {
+    list-style-type: disc;
+    padding-left: 1rem;
+    color: #6b7280;
+  }
+  .image-warning {
+    font-size: 0.875rem;
+    color: #dc2626;
+    margin-top: 0.25rem;
+  }
+/* Rank Badge Styles */
+.rank-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+  }
+  
+  .rank-professional {
+    background-color: #4f46e5;
+    color: white;
+  }
+  
+  .rank-passionate {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .rank-exploring {
+    background-color: #10b981;
+    color: white;
+  }    
